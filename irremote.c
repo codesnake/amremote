@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <memory.h>
+#include <sys/ioctl.h>
 #include "remote_config.h"
 #include "keydefine.h"
 #define FACTCUSTCODE_MAX 20
