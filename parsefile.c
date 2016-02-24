@@ -47,7 +47,6 @@ static void trim_line_data(char *line_data_buf) {
     //trim other character
     tmp_ptr = line_data_buf;
     str_trim(&tmp_ptr);
-    strncpy(line_data_buf, tmp_ptr, CC_MAX_LINE_LEN);
 }
 
 static int remote_config_set(char *name, char *value, remote_config_t *config) {
