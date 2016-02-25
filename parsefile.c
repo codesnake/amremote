@@ -47,6 +47,7 @@ static void trim_line_data(char *line_data_buf) {
     //trim other character
     tmp_ptr = line_data_buf;
     str_trim(&tmp_ptr);
+    memmove(line_data_buf, tmp_ptr, strlen(tmp_ptr) + 1);
 }
 
 static int remote_config_set(char *name, char *value, remote_config_t *config) {
