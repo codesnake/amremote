@@ -8,7 +8,7 @@
 int set_config(remote_config_t *remote, int device_fd)
 {
     unsigned int i;
-    unsigned int *para=(unsigned int*)remote + 4;
+    unsigned int *para = &remote->repeat_delay;
 
     for(i = 0; i < ARRAY_SIZE(config_item); i++){
         if(para[i]!=0xffffffff){

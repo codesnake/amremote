@@ -52,7 +52,7 @@ static void trim_line_data(char *line_data_buf) {
 
 static int remote_config_set(char *name, char *value, remote_config_t *config) {
     unsigned int i;
-    unsigned int *config_para = (unsigned int*) config + 4;
+    unsigned int *config_para = &config->repeat_delay;
 
     for (i = 0; i < ARRAY_SIZE(config_item); i++) {
         if (strcmp(config_item[i], name) == 0) {
